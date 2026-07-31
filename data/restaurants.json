@@ -1,0 +1,98 @@
+[
+  {
+    "name": "Burger Chef",
+    "foundedYear": 1954,
+    "closedYear": 1996,
+    "headquarters": "Indianapolis, Indiana",
+    "country": "United States",
+    "peakLocations": 1050,
+    "signatureItems": ["Big Shef", "Super Shef", "Funmeal"],
+    "closureReason": "The chain was sold, and most locations were converted to Hardee's or other brands.",
+    "history": "Burger Chef grew into a major hamburger chain and became known for family-oriented meals and bundled burger, fries, and drink offerings.",
+    "sourceNote": "Historical sample compiled from public reference material; verify disputed peak-location totals before formal publication."
+  },
+  {
+    "name": "Red Barn",
+    "foundedYear": 1961,
+    "closedYear": 1988,
+    "headquarters": "Springfield, Ohio",
+    "country": "United States",
+    "peakLocations": 400,
+    "signatureItems": ["Big Barney", "Barnbuster", "Fried chicken"],
+    "closureReason": "Later ownership reduced advertising and allowed franchise agreements to expire.",
+    "history": "Red Barn used distinctive barn-shaped buildings and operated in the United States, Canada, and Australia.",
+    "sourceNote": "Peak count is commonly reported as a range of roughly 300 to 400 locations."
+  },
+  {
+    "name": "Pup 'N' Taco",
+    "foundedYear": 1956,
+    "closedYear": 1984,
+    "headquarters": "Long Beach, California",
+    "country": "United States",
+    "peakLocations": 102,
+    "signatureItems": ["Tacos", "Hot dogs", "Pastrami sandwiches", "Slush drinks"],
+    "closureReason": "Taco Bell purchased most California locations and converted the properties.",
+    "history": "The Southern California drive-in chain combined tacos, hot dogs, burgers, and pastrami on one menu.",
+    "sourceNote": "The original California chain ended in 1984; related New Mexico operations continued under a modified name for a time."
+  },
+  {
+    "name": "Wetson's",
+    "foundedYear": 1959,
+    "closedYear": 1975,
+    "headquarters": "New York metropolitan area",
+    "country": "United States",
+    "peakLocations": 70,
+    "signatureItems": ["Big W", "Hamburgers", "French fries"],
+    "closureReason": "The regional chain struggled against larger national competitors and merged with Nathan's Famous.",
+    "history": "Wetson's was a New York-area hamburger chain recognized by orange-circle branding and low-priced menu items.",
+    "sourceNote": "The brand was discontinued after its mid-1970s merger and location closures."
+  },
+  {
+    "name": "Sandy's",
+    "foundedYear": 1956,
+    "closedYear": 1979,
+    "headquarters": "Kewanee, Illinois",
+    "country": "United States",
+    "peakLocations": 120,
+    "signatureItems": ["Hamburgers", "Milkshakes", "French fries"],
+    "closureReason": "Hardee's acquired the company, and most restaurants converted to the Hardee's brand.",
+    "history": "Sandy's Drive-In expanded across the Midwest before its restaurants were gradually rebranded.",
+    "sourceNote": "The last location using the Sandy's brand is commonly reported as converting in 1979."
+  },
+  {
+    "name": "Gino's Hamburgers",
+    "foundedYear": 1957,
+    "closedYear": 1982,
+    "headquarters": "Baltimore, Maryland",
+    "country": "United States",
+    "peakLocations": 359,
+    "signatureItems": ["Gino Giant", "Sirloiner", "Kentucky Fried Chicken"],
+    "closureReason": "Marriott acquired the chain and converted many locations to Roy Rogers restaurants.",
+    "history": "Gino's combined hamburger service with Kentucky Fried Chicken products and became a prominent Mid-Atlantic chain.",
+    "sourceNote": "This record describes the original national chain, not later businesses using a similar revived name."
+  },
+  {
+    "name": "Carrols",
+    "foundedYear": 1960,
+    "closedYear": 2012,
+    "headquarters": "Syracuse, New York",
+    "country": "United States and Northern Europe",
+    "peakLocations": 150,
+    "signatureItems": ["Club Burger", "Hamburgers", "Milkshakes"],
+    "closureReason": "Most U.S. restaurants became Burger King locations; remaining European restaurants were later converted to Hesburger.",
+    "history": "Carrols began as a hamburger chain, although the corporation later continued as a large Burger King franchise operator.",
+    "sourceNote": "The restaurant brand disappeared, while the related corporation continued operating other restaurant brands."
+  },
+  {
+    "name": "White Tower Hamburgers",
+    "foundedYear": 1926,
+    "closedYear": 2022,
+    "headquarters": "Milwaukee, Wisconsin",
+    "country": "United States",
+    "peakLocations": 230,
+    "signatureItems": ["Hamburgers", "Soft drinks"],
+    "closureReason": "The chain declined over many decades; the final Toledo restaurant closed after a fire.",
+    "history": "White Tower used white fortress-style restaurant buildings and once operated in numerous U.S. cities.",
+    "sourceNote": "Older summaries sometimes list 2004, but the final Toledo operation is reported to have remained until 2022."
+  }
+]
