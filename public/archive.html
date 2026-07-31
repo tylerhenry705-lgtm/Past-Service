@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="Search and manage MongoDB restaurant documents in the Past Service archive." name="description"/>
+<meta content="#101a17" name="theme-color"/>
+<title>Archive — Past Service</title>
+<link href="styles.css?v=20260727" rel="stylesheet"/>
+<link href="favicon.svg" rel="icon" type="image/svg+xml"/><link href="manifest.webmanifest" rel="manifest"/><meta content="light" name="color-scheme"/></head>
+<body>
+<a class="skip-link" href="#main-content">Skip to content</a>
+<header class="site-header"><div aria-hidden="true" class="scroll-progress" id="scroll-progress"></div>
+<nav aria-label="Primary navigation" class="nav-shell">
+<a aria-label="Past Service home" class="brand" href="index.html">
+<span aria-hidden="true" class="brand__mark"><svg viewbox="0 0 48 48"><path d="M11 23h26M14 18c2-7 18-7 20 0M14 29h20M17 35h14"></path></svg></span>
+<span><strong>Past Service</strong><small>Fast-food archive</small></span>
+</a>
+<div class="nav-links">
+<a href="overview.html">Overview</a>
+<a href="photos.html">Photos</a>
+<a aria-current="page" class="is-active" href="archive.html">Archive</a>
+<button class="button button--primary button--small" id="open-create-button" type="button"><span aria-hidden="true">＋</span> Add restaurant</button>
+</div>
+<button aria-controls="mobile-navigation" aria-expanded="false" aria-label="Open navigation menu" class="menu-toggle" id="menu-toggle" type="button"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"></path></svg></button></nav>
+<div class="mobile-navigation" hidden="" id="mobile-navigation"><div class="mobile-navigation__inner"><a href="index.html">Home</a><a href="overview.html">Overview</a><a href="photos.html">Photos</a><a aria-current="page" class="is-active" href="archive.html">Archive</a><a class="button button--gold" href="archive.html?action=add">＋ Add restaurant</a></div></div></header>
+<main id="main-content">
+<section class="page-hero page-hero--archive">
+<div class="page-hero__inner">
+<div>
+<p class="eyebrow eyebrow--light">MongoDB documents</p>
+<h1>Restaurant archive</h1>
+<p>Search, filter, create, edit, and remove records through the Express CRUD API.</p>
+</div>
+<img alt="Former Pup N Taco restaurant building" decoding="async" src="images/archive/pup-n-taco.webp"/>
+</div>
+</section>
+<section aria-labelledby="archive-heading" class="section section--archive">
+<div class="section__heading section__heading--split">
+<div><p class="eyebrow">Restaurant collection</p><h2 id="archive-heading">Browse the archive</h2><p>Each card represents a document in the MongoDB restaurants collection.</p></div>
+<button class="button button--primary" id="section-create-button" type="button"><span aria-hidden="true">＋</span> New restaurant</button>
+</div>
+<form class="filter-panel" id="filter-form">
+<label class="search-field"><span>Search the collection</span><span class="input-with-icon"><svg aria-hidden="true" viewbox="0 0 24 24"><circle cx="11" cy="11" r="7"></circle><path d="m16.5 16.5 4 4"></path></svg><input id="search" name="search" placeholder="Restaurant, city, or menu item" type="search"/></span></label>
+<label><span>Closure decade</span><select id="decade" name="decade"><option value="">All decades</option><option value="1970">1970s</option><option value="1980">1980s</option><option value="1990">1990s</option><option value="2000">2000s</option><option value="2010">2010s</option><option value="2020">2020s</option></select></label>
+<label><span>Sort by</span><select id="sort" name="sort"><option value="name">Name</option><option value="foundedYear">Founded year</option><option value="closedYear">Closed year</option><option value="peakLocations">Peak locations</option></select></label>
+<label><span>Direction</span><select id="order" name="order"><option value="asc">Ascending</option><option value="desc">Descending</option></select></label>
+<div class="filter-actions"><button class="button button--primary" type="submit">Apply</button><button class="button button--text" id="reset-filters" type="button">Reset</button></div>
+</form>
+<div class="results-bar"><p aria-live="polite" class="status" id="status-message">Loading restaurants…</p><div class="view-label"><span aria-hidden="true">▦</span> Card view</div></div>
+<div aria-live="polite" class="restaurant-grid" id="restaurant-list"></div>
+</section>
+</main>
+<footer class="site-footer"><div class="footer-shell"><div class="brand brand--footer"><span aria-hidden="true" class="brand__mark"><svg viewbox="0 0 48 48"><path d="M11 23h26M14 18c2-7 18-7 20 0M14 29h20M17 35h14"></path></svg></span><span><strong>Past Service</strong><small>MongoDB archive project</small></span></div><p>Changes made here are saved to the database and can be verified in MongoDB Compass.</p></div>
+<div class="footer-lower">
+<span class="database-status"><i aria-hidden="true" id="database-status-dot"></i><span id="database-status-text">Checking database connection…</span></span>
+<span>© <span data-current-year=""></span> Past Service</span>
+</div></footer>
+<dialog class="modal" id="restaurant-dialog">
+<form class="modal__surface" id="restaurant-form">
+<div class="modal__header"><div><p class="eyebrow" id="form-eyebrow">Create a document</p><h2 id="form-title">Add a restaurant</h2><p id="form-description">Enter the historical details for a defunct fast-food chain.</p></div><button aria-label="Close dialog" class="icon-button" id="close-dialog-button" type="button">×</button></div>
+<input id="restaurant-id" name="restaurantId" type="hidden"/>
+<div class="entry-form">
+<label><span>Restaurant name</span><input autocomplete="organization" name="name" placeholder="e.g., Burger Chef" required=""/></label>
+<label><span>Headquarters</span><input name="headquarters" placeholder="City, State" required=""/></label>
+<label><span>Founded year</span><input max="2100" min="1800" name="foundedYear" placeholder="1954" required="" type="number"/></label>
+<label><span>Closed year</span><input max="2100" min="1800" name="closedYear" placeholder="1996" required="" type="number"/></label>
+<label><span>Country or region</span><input name="country" placeholder="United States" required=""/></label>
+<label><span>Peak locations</span><input min="0" name="peakLocations" placeholder="1050" type="number"/></label>
+<label class="wide"><span>Signature items <small>Separate items with commas</small></span><input name="signatureItems" placeholder="Big Shef, Super Shef, Funmeal"/></label>
+<label class="wide"><span>Closure reason</span><textarea name="closureReason" placeholder="Explain why the chain disappeared or changed brands." required="" rows="3"></textarea></label>
+<label class="wide"><span>Brief history</span><textarea name="history" placeholder="Summarize the restaurant's history and significance." required="" rows="4"></textarea></label>
+</div>
+<div class="modal__actions"><button class="button button--secondary" id="cancel-dialog-button" type="button">Cancel</button><button class="button button--primary" id="save-button" type="submit">Save restaurant</button></div>
+</form>
+</dialog>
+<template id="restaurant-template">
+<article class="restaurant-card">
+<figure class="restaurant-card__media"><img alt="" class="restaurant-card__image" loading="lazy"/><figcaption class="restaurant-card__image-label"></figcaption></figure>
+<div class="restaurant-card__accent"></div>
+<div class="restaurant-card__body">
+<div class="restaurant-card__top"><div class="restaurant-identity"><div aria-hidden="true" class="restaurant-logo"></div><div><p class="restaurant-card__years"></p><h3 class="restaurant-card__name"></h3></div></div><div class="card-actions"><button aria-label="Edit restaurant" class="icon-button edit-button" title="Edit restaurant" type="button"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="m4 16-.8 4.8L8 20l10.4-10.4a2.1 2.1 0 0 0-3-3Z"></path><path d="m14 8 3 3"></path></svg></button><button aria-label="Delete restaurant" class="icon-button delete-button" title="Delete restaurant" type="button"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M4 7h16M9 7V4h6v3M7 7l1 13h8l1-13"></path><path d="M10 11v5M14 11v5"></path></svg></button></div></div>
+<p class="restaurant-card__location"></p><p class="restaurant-card__history"></p>
+<div class="restaurant-card__metrics"><div><span>Peak locations</span><strong class="restaurant-card__peak"></strong></div><div><span>Lifespan</span><strong class="restaurant-card__lifespan"></strong></div></div>
+<div class="restaurant-card__detail"><span>Signature menu</span><p class="restaurant-card__items"></p></div>
+<details><summary>Why the brand ended</summary><p class="restaurant-card__reason"></p></details>
+</div>
+</article>
+</template>
+<div aria-atomic="true" aria-live="polite" class="toast" id="toast" role="status"></div>
+<button aria-label="Back to top" class="back-to-top" id="back-to-top" type="button">↑</button><script defer="True" src="site.js?v=20260727"></script><script defer="" src="archive.js?v=20260727"></script>
+</body>
+</html>

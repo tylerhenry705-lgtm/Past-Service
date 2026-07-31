@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="Past Service is a MongoDB-powered archive of defunct fast-food restaurant chains." name="description"/>
+<meta content="#101a17" name="theme-color"/>
+<title>Past Service — Defunct Fast-Food Archive</title>
+<link href="favicon.svg" rel="icon" type="image/svg+xml"/>
+<link href="styles.css?v=20260727" rel="stylesheet"/>
+<link href="manifest.webmanifest" rel="manifest"/><meta content="light" name="color-scheme"/></head>
+<body>
+<a class="skip-link" href="#main-content">Skip to content</a>
+<header class="site-header"><div aria-hidden="true" class="scroll-progress" id="scroll-progress"></div>
+<nav aria-label="Primary navigation" class="nav-shell">
+<a aria-label="Past Service home" class="brand" href="index.html">
+<span aria-hidden="true" class="brand__mark">
+<svg viewbox="0 0 48 48"><path d="M11 23h26M14 18c2-7 18-7 20 0M14 29h20M17 35h14"></path></svg>
+</span>
+<span><strong>Past Service</strong><small>Fast-food archive</small></span>
+</a>
+<div class="nav-links">
+<a href="overview.html">Overview</a>
+<a href="photos.html">Photos</a>
+<a href="archive.html">Archive</a>
+<a class="button button--primary button--small" href="archive.html?action=add"><span aria-hidden="true">＋</span> Add restaurant</a>
+</div>
+<button aria-controls="mobile-navigation" aria-expanded="false" aria-label="Open navigation menu" class="menu-toggle" id="menu-toggle" type="button"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"></path></svg></button></nav>
+<div class="mobile-navigation" hidden="" id="mobile-navigation"><div class="mobile-navigation__inner"><a aria-current="page" class="is-active" href="index.html">Home</a><a href="overview.html">Overview</a><a href="photos.html">Photos</a><a href="archive.html">Archive</a><a class="button button--gold" href="archive.html?action=add">＋ Add restaurant</a></div></div></header>
+<main id="main-content">
+<section aria-labelledby="hero-title" class="hero hero--home">
+<div class="hero__grid">
+<div class="hero__copy">
+<p class="eyebrow eyebrow--light">MongoDB collection project</p>
+<h1 id="hero-title">An archive of brands that left the menu.</h1>
+<p class="hero__lede">Explore the rise, decline, architecture, and legacy of fast-food restaurant chains that disappeared, merged, or were converted into other brands.</p>
+<div class="hero__actions">
+<a class="button button--gold" href="archive.html">Browse the archive</a>
+<a class="button button--ghost" href="photos.html">View restaurant photos</a>
+</div>
+<div aria-label="Project technologies" class="hero__proof">
+<span>MongoDB</span><span>Express</span><span>Node.js</span><span>CRUD API</span>
+</div>
+</div>
+
+<aside aria-label="Historic fast-food restaurant photo preview" class="hero-collage">
+<figure class="hero-collage__main"><img alt="Former Burger Chef restaurant building" decoding="async" loading="eager" src="images/archive/burger-chef.webp"/></figure>
+<figure class="hero-collage__small hero-collage__small--top"><img alt="Converted barn-shaped former restaurant building" decoding="async" loading="eager" src="images/archive/red-barn.webp"/></figure>
+<figure class="hero-collage__small hero-collage__small--bottom"><img alt="Former Pup N Taco restaurant building" decoding="async" loading="eager" src="images/archive/pup-n-taco.webp"/></figure>
+<div class="hero-collage__caption"><span>Historic restaurant media</span><strong id="hero-record-count">Loading collection…</strong></div>
+</aside>
+</div>
+</section>
+<section aria-labelledby="portal-heading" class="section section--portal">
+<div class="section__heading">
+<p class="eyebrow">Explore the project</p>
+<h2 id="portal-heading">Three dedicated pages</h2>
+<p>Each navigation link now opens a separate page, giving the project the structure of a professional website.</p>
+</div>
+<div class="portal-grid">
+<a class="portal-card" href="overview.html">
+<img alt="Vintage drive-in illustration representing the database dashboard" src="images/archive/drive-in-illustration.webp"/>
+<span class="portal-card__body">
+<small>Dashboard</small>
+<strong>Overview</strong>
+<span>View collection totals, lifespan statistics, and closure trends.</span>
+</span>
+</a>
+<a class="portal-card" href="photos.html">
+<img alt="Former Burger Chef restaurant building" src="images/archive/burger-chef.webp"/>
+<span class="portal-card__body">
+<small>Historical media</small>
+<strong>Photos</strong>
+<span>Browse real restaurant buildings and credited archive photographs.</span>
+</span>
+</a>
+<a class="portal-card" href="archive.html">
+<img alt="Converted barn-shaped restaurant building" src="images/archive/red-barn.webp"/>
+<span class="portal-card__body">
+<small>MongoDB documents</small>
+<strong>Archive</strong>
+<span>Search, filter, create, edit, and delete restaurant records.</span>
+</span>
+</a>
+</div>
+</section>
+</main>
+<footer class="site-footer">
+<div class="footer-shell">
+<div class="brand brand--footer">
+<span aria-hidden="true" class="brand__mark"><svg viewbox="0 0 48 48"><path d="M11 23h26M14 18c2-7 18-7 20 0M14 29h20M17 35h14"></path></svg></span>
+<span><strong>Past Service</strong><small>MongoDB archive project</small></span>
+</div>
+<p>Built with MongoDB, Express, Node.js, semantic HTML, responsive CSS, and credited historical media.</p>
+</div>
+
+<div class="footer-lower">
+<span class="database-status"><i aria-hidden="true" id="database-status-dot"></i><span id="database-status-text">Checking database connection…</span></span>
+<span>© <span data-current-year=""></span> Past Service</span>
+</div></footer>
+<button aria-label="Back to top" class="back-to-top" id="back-to-top" type="button">↑</button><script defer="True" src="site.js?v=20260727"></script><script defer="" src="home.js?v=20260727"></script>
+</body>
+</html>

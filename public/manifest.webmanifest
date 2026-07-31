@@ -1,0 +1,9 @@
+{
+  "name": "Past Service — Defunct Fast-Food Archive",
+  "short_name": "Past Service",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#f6f3eb",
+  "theme_color": "#101a17",
+  "icons": [{"src": "favicon.svg", "sizes": "any", "type": "image/svg+xml"}]
+}

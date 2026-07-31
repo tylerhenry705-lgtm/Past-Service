@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="Dashboard and MongoDB aggregation statistics for the Past Service fast-food archive." name="description"/>
+<meta content="#101a17" name="theme-color"/>
+<title>Overview — Past Service</title>
+<link href="styles.css?v=20260727" rel="stylesheet"/>
+<link href="favicon.svg" rel="icon" type="image/svg+xml"/><link href="manifest.webmanifest" rel="manifest"/><meta content="light" name="color-scheme"/></head>
+<body>
+<a class="skip-link" href="#main-content">Skip to content</a>
+<header class="site-header"><div aria-hidden="true" class="scroll-progress" id="scroll-progress"></div>
+<nav aria-label="Primary navigation" class="nav-shell">
+<a aria-label="Past Service home" class="brand" href="index.html">
+<span aria-hidden="true" class="brand__mark"><svg viewbox="0 0 48 48"><path d="M11 23h26M14 18c2-7 18-7 20 0M14 29h20M17 35h14"></path></svg></span>
+<span><strong>Past Service</strong><small>Fast-food archive</small></span>
+</a>
+<div class="nav-links">
+<a aria-current="page" class="is-active" href="overview.html">Overview</a>
+<a href="photos.html">Photos</a>
+<a href="archive.html">Archive</a>
+<a class="button button--primary button--small" href="archive.html?action=add"><span aria-hidden="true">＋</span> Add restaurant</a>
+</div>
+<button aria-controls="mobile-navigation" aria-expanded="false" aria-label="Open navigation menu" class="menu-toggle" id="menu-toggle" type="button"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"></path></svg></button></nav>
+<div class="mobile-navigation" hidden="" id="mobile-navigation"><div class="mobile-navigation__inner"><a href="index.html">Home</a><a aria-current="page" class="is-active" href="overview.html">Overview</a><a href="photos.html">Photos</a><a href="archive.html">Archive</a><a class="button button--gold" href="archive.html?action=add">＋ Add restaurant</a></div></div></header>
+<main id="main-content">
+<section class="page-hero page-hero--overview">
+<div class="page-hero__inner">
+<div>
+<p class="eyebrow eyebrow--light">Dashboard</p>
+<h1>Collection overview</h1>
+<p>MongoDB aggregation results summarize the restaurant documents currently stored in the database.</p>
+</div>
+<img alt="Historic White Tower Hamburgers restaurant building" decoding="async" src="images/archive/white-tower.webp"/>
+</div>
+</section>
+<section aria-labelledby="overview-heading" class="section section--overview">
+<div class="section__heading section__heading--split">
+<div>
+<p class="eyebrow">Live database metrics</p>
+<h2 id="overview-heading">Database at a glance</h2>
+<p>Values update whenever the MongoDB collection changes.</p>
+</div>
+<button class="button button--secondary button--small" id="refresh-button" type="button"><span aria-hidden="true" class="refresh-icon">↻</span> Refresh data</button>
+</div>
+<div aria-live="polite" class="summary-grid" id="summary-cards"></div>
+<div class="analytics-grid">
+<article class="analytics-card">
+<div class="card-heading">
+<div><p class="card-kicker">Closure timeline</p><h3>Restaurants by decade</h3></div>
+<span class="badge">Aggregation</span>
+</div>
+<div aria-label="Number of restaurant closures by decade" class="bar-chart" id="decade-chart"></div>
+</article>
+<article class="analytics-card analytics-card--insight">
+<p class="card-kicker">Archive insight</p>
+<h3 id="insight-title">Loading collection insight…</h3>
+<p id="insight-copy">The database is being analyzed.</p>
+<div class="insight-stat"><span>Largest chain at its peak</span><strong id="largest-peak">—</strong></div>
+</article>
+</div>
+<div class="page-actions">
+<a class="button button--primary" href="archive.html">Browse restaurant records</a>
+<a class="button button--secondary" href="photos.html">View historical photos</a>
+</div>
+</section>
+</main>
+<footer class="site-footer"><div class="footer-shell"><div class="brand brand--footer"><span aria-hidden="true" class="brand__mark"><svg viewbox="0 0 48 48"><path d="M11 23h26M14 18c2-7 18-7 20 0M14 29h20M17 35h14"></path></svg></span><span><strong>Past Service</strong><small>MongoDB archive project</small></span></div><p>Dashboard statistics are calculated by the project API from the live restaurant collection.</p></div>
+<div class="footer-lower">
+<span class="database-status"><i aria-hidden="true" id="database-status-dot"></i><span id="database-status-text">Checking database connection…</span></span>
+<span>© <span data-current-year=""></span> Past Service</span>
+</div></footer>
+<div aria-atomic="true" aria-live="polite" class="toast" id="toast" role="status"></div>
+<button aria-label="Back to top" class="back-to-top" id="back-to-top" type="button">↑</button><script defer="True" src="site.js?v=20260727"></script><script defer="" src="overview.js?v=20260727"></script>
+</body>
+</html>
