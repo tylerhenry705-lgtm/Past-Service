@@ -1,0 +1,30 @@
+{
+  "name": "defunct-fast-food-mongodb",
+  "version": "1.0.0",
+  "description": "MongoDB project for cataloging fast-food restaurant chains that no longer operate under their original brand.",
+  "main": "server.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js",
+    "seed": "node seed.js",
+    "check": "node --check server.js && node --check seed.js && node --check config/db.js && node --check controllers/restaurantsController.js && node --check routes/restaurants.js && node --check public/app.js"
+  },
+  "keywords": [
+    "mongodb",
+    "nodejs",
+    "express",
+    "fast-food",
+    "crud"
+  ],
+  "author": "",
+  "license": "MIT",
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "mongodb": "^7.5.0"
+  }
+}
